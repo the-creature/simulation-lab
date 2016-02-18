@@ -1,0 +1,41 @@
+<div class="modal-dialog">
+    <section>
+        <div class="modal-header">
+            <img class="close" ng-click="cancel()" width="24" src="assets/images/controls/close.png" alt="close" />
+            
+            <h3 class="modal-title">Item Properties</h3>
+        </div>
+        
+        <div class="modal-body label-modal">
+            <p class="label">{{labelDesc}}:</p>
+
+            <form name="modal-form" action novalidate ng-submit="ok()">
+                <input class="input-label" type="text"  ng-enter="ok()" name="text" ng-model="label" autocomplete='off' />
+
+                <div ng-if="type === 'erlenmeyerflask'">
+                    <div class="radio-option">
+                        <label>
+                            <input type="radio" name="state" ng-model="$parent.state" value="false"/> 
+                            Open
+                        </label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        <label>
+                            <input type="radio" name="state" ng-model="$parent.state" value="true"/> 
+                            Closed
+                        </label>
+                    </div>
+                </div>
+
+                <div ng-if="type === 'crucible'">
+                    <input type="checkbox" name="content" ng-model="$parent.content" value="true"/> Show content
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" type="submit" value="Submit" ng-click="ok()">OK</button>
+        </div>
+    </section>
+</div>

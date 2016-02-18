@@ -1,0 +1,12 @@
+<div ng-drag="draggable" ng-attr-id="{{ timerData.uuid }}" ng-style="{position: 'absolute', left :timerData.x, top:timerData.y, zIndex: 9999}" ng-drag-data="timerData"
+     class="drop-item draggable-timer">
+    <div  ng-mouseup="mouseUp()">
+        <div ng-mousedown="draggable=true">
+            <span class="hours">{{ timerData.hours > 9 ? timerData.hours : '0' + timerData.hours }}</span> :
+            <span class="minutes">{{ timerData.minutes > 9 ? timerData.minutes : '0' + timerData.minutes }}</span> :
+            <span class="seconds">{{ timerData.seconds > 9 ? timerData.seconds : '0' + timerData.seconds }}</span>
+        </div>
+        <button type="button" class="stop-timer" ng-click="stopTimer()">&times;</button>
+    </div>
+    <div style="clear: both"></div>
+</div>

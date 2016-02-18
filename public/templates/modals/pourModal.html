@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+    <section>
+        <div class="modal-header">
+            <img class="close" ng-click="cancel()" width="24" src="assets/images/controls/close.png" alt="close" />
+            
+            <h3 class="modal-title">Enter an amount to add:</h3>
+        </div>
+        
+        <div class="modal-body">
+		    <p class="enter">You can add up: {{maxPour}} {{unit}}</p>
+
+		    <form name="modal-form" action novalidate ng-submit="ok()">
+                <div class="pour-indicator" ng-show="showPourAll">
+                    <input type="checkbox" name="pourAll" ng-model="pourAll" />
+                    <label>Pour All</label>
+		        </div>
+
+
+                <div class="individual-pour-indicator">
+                    <input type="numbers" name="text" ng-model="input" digit-input max="maxPour"
+                       ng-disabled="pourAll" autocomplete='off' ng-enter="ok()" />
+                    <label>{{unit}}</label>
+                </div>
+		    </form>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" type="submit" value="Submit" ng-click="ok()">OK</button>
+        </div>
+    </section>
+</div>

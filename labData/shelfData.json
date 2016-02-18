@@ -1,0 +1,71 @@
+{
+  "shelfImage": "assets/images/lab/shelf.png",
+  "containers": [
+    {
+      "name": "beaker",
+      "type": "beaker_250mL"
+    },
+    {
+      "name": "beaker",
+      "type": "beaker_50mL"
+    },
+    {
+      "name": "crucible"
+    },
+    {
+      "name": "testtube"
+    },
+    {
+      "name": "evaporatingdish"
+    },
+    {
+      "name": "graduatedcylinder"
+    },
+    {
+      "name": "erlenmeyerflask"
+    }
+  ],
+  "materials": [
+    {
+      "name": "water"
+    },
+    {
+      "name": "redWater"
+    },
+    {
+      "name": "greenWater"
+    },
+    {
+      "name": "yellowWater"
+    },
+    {
+      "name": "salt"
+    },
+    {
+      "name": "sugar"
+    },
+    {
+      "name": "rock"
+    }
+  ],
+  "instruments": [
+    {
+      "name": "thermometer"
+    },
+    {
+      "name": "bunsenburner"
+    },
+    {
+      "name": "balance"
+    },
+    {
+      "name": "gassyringe"
+    },
+    {
+      "name": "temperaturebath"
+    },
+    {
+      "name": "pressuregauge"
+    }
+  ]
+}

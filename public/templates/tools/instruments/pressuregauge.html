@@ -1,0 +1,6 @@
+<div class="pressuregauge tool-wrap">
+    <canvas class="outline-canvas" style="display:none"></canvas>
+    <!-- <span class="pressure">{{ uiData.parent.state.pressure | pressure : uiData.state.scale }}</span> -->
+    <span class="pressure">{{ uiData.parent.state.pressure }}</span>
+    <span class="button-scale-change" ng-click="changeScale($event)" ng-cancel-drag>{{uiData.state.scale}}</span>
+</div>

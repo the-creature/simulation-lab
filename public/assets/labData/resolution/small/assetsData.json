@@ -1,0 +1,182 @@
+{
+    "trash":{  
+        "one": {
+            "sprite":"assets/images/sprites/biowaste_bin_sprites.png",
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251            
+        },
+        "two": {
+            "sprite":"assets/images/sprites/biowaste_bin_sprites.png",
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251            
+        },
+        "three": {
+            "sprite":"assets/images/sprites/biowaste_bin_sprites.png",
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251            
+        },
+        "four": {
+            "sprite":"assets/images/sprites/biowaste_bin_sprites.png",
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251            
+        }
+    },
+    "shelf":{  
+        "one": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":"assets/images/lab/resolution/medium/shelf.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251
+        },
+        "two": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":"assets/images/lab/shelf.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251
+        },
+        "three": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":"assets/images/lab/shelf.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251  
+        },
+        "four": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":"assets/images/lab/shelf.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251
+        }
+    },
+    "lightSwitch":{  
+        "one": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "on":"assets/images/lab/light_switch_on.png",
+                "off":"assets/images/lab/light_switch_off.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0         
+        },
+        "two": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "on":"assets/images/lab/light_switch_on.png",
+                "off":"assets/images/lab/light_switch_off.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0          
+        },
+        "three": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "on":"assets/images/lab/light_switch_on.png",
+                "off":"assets/images/lab/light_switch_off.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0          
+        },
+        "four": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "on":"assets/images/lab/light_switch_on.png",
+                "off":"assets/images/lab/light_switch_off.png light_switch_off.png"
+            },
+            "x":0,
+            "y":0,
+            "z":0          
+        }
+    },
+    "light":{  
+        "one": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":""
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251         
+        },
+        "two": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":""
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251         
+        },
+        "three": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":""
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251           
+        },
+        "four": {
+            "assets":{  
+                "width":110,
+                "height":251,
+                "source":""
+            },
+            "x":0,
+            "y":0,
+            "z":0,
+            "width":110,
+            "height":251           
+        }
+    }
+}

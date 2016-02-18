@@ -1,0 +1,6 @@
+<div class="lab-table" ng-drop="true" ng-drop-success="onDropComplete($data, $event)">
+    <table-item item="item" ng-repeat="(uuid, item) in tableItems"></table-item>
+
+    <div id="triangle-topright" class="side-table" ng-drop="true" ng-drop-success="onDropComplete($data,$event)" data-drop-uuid="table-right"></div>
+    <div id="triangle-topleft" class="side-table" ng-drop="true" ng-drop-success="onDropComplete($data,$event)" data-drop-uuid="table-left"></div>
+</div>

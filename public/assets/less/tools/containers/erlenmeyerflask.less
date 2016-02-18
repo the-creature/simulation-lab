@@ -1,0 +1,51 @@
+/*
+* Erlenmeyer Flask
+*/
+erlenmeyerflask, [erlenmeyerflask] {
+    display: inline-block;
+}
+
+.erlenmeyerflask .erlenmeyerflask-canvas, .erlenmeyerflask .outline-canvas, .erlenmeyerflask .erlenmeyerflask-canvas-solid, .erlenmeyerflask .erlenmeyerflask-canvas-solid2 {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: relative;
+}
+
+.erlenmeyerflask {
+    .steam-canvas {
+        position: absolute;
+        left: 27%;
+        top: 26%;
+    }
+
+    .bubble-canvas {
+        position: absolute;
+        left: 15%;
+        bottom: 0;
+        width: 75%;
+        height: 50%;
+    }
+    
+    .stopper {
+        position: absolute;
+        -moz-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+
+    .exploding-canvas {
+        width: 300%;
+        height: 300%;
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        display: none;
+    }
+
+    .outline-canvas {
+        position: absolute;
+        left: 0px;  
+        top: 0;  
+    }
+}

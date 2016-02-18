@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/css/kendo.common.min.css" />
+        <link rel="stylesheet" href="assets/css/kendo.bootstrap.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+    </head>
+
+    <body>
+        <div id="intro" ng-controller="introController" ng-show="statuses.isIntroPlaying || statuses.isClosed">
+            <lab-welcome ng-show="statuses.isLoading" lab-percent="statuses.percentLoaded"></lab-welcome>
+            <canvas id="intro-stage"></canvas>
+        </div>
+
+        <div id="intro" class="pre-intro">
+            <div class="welcomeLayer">
+                <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+                    <radialGradient id='glow' gradientUnits='userSpaceOnUse' cx='434' cy='357' r='317'>
+                        <stop offset='0%' stop-color='#1c1c1c'/>
+                        <stop offset='0%' stop-color='#2b2a2a'/>
+                        <stop offset='100%' stop-color='#111111'/>
+                    </radialGradient>
+                    <rect fill='url(#glow)' x='-1%' y='-1%' width='102%' height='102%'/>
+                </svg>
+
+                <div class="content">
+                    <div id="welcomeMsg" class="welcomeMsg"></div>
+
+                    <strong id="percentNum" style="font-size:14px">Loading, please wait...</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="container lab" ng-hide="statuses.isIntroPlaying || statuses.isClosed" ng-controller="labController">
+            <div class="workspace">
+                <dashboard></dashboard>
+
+                <lab-shelf></lab-shelf>
+
+                <light-switch status="on"></light-switch>
+
+                <lab-table table-items="tableItems" matrix="matrix"></lab-table>
+
+                <drag-timer ng-repeat="timer in dragTimers" timer-data="timer"></drag-timer>
+
+                <ng-biowaste-bin></ng-biowaste-bin>
+            </div>
+
+            <div class="controls">
+                <div class="coleft">
+                    <lab-timer timers="dragTimers"></lab-timer>
+                    <table-tools drag-timers="dragTimers"></table-tools>
+                </div>
+                <div class="cbox coright">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Zoom In (+ or mouse wheel)" ng-mousedown="zoomIn()" ng-mouseup="stopZoom()">+</a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Zoom Out (- or mouse wheel)" ng-mousedown="zoomOut()" ng-mouseup="stopZoom()">-</a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Re-set Zoom (R)" ng-click="zoomOff()" class="reset-btn">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            
+            <manual lab-notes="labNotes">></manual>
+            
+            <audio id="audioTop">
+                <source src="assets/audio/top.mp3" type="audio/mp3">
+            </audio>
+            <audio id="audioSwitch">
+                <source src="assets/audio/switch.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <script data-main="scripts/main" src="assets/scripts/vendors/require.js"></script>
+        <script id="lab.config" type="application/javascript">var initObj = {lab_id:31};</script>
+        <script src="assets/scripts/config/config.js"></script>
+        <script id="env.js"></script>
+    </body>
+</html>

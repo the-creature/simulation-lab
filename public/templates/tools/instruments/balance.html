@@ -1,0 +1,22 @@
+<div class="balance tool-wrap">
+    <canvas class="outline-canvas" style="display:none"></canvas>
+    <div class="sub-beaker inner-item" ng-if="uiData.beaker" ng-drag="true" ng-drag-data="uiData.beaker" ng-drag-reset="false" ng-attr-id="{{uiData.beaker.uuid}}"
+         ng-drop="true" ng-drop-success="onDropToBeakerComplete($data,$event)" ng-drop-name="uiData.beaker.name" data-drop-uuid="{{uiData.beaker.uuid}}">
+        <beaker ui-data="uiData.beaker" data-uuid="{{uiData.beaker.uuid}}" lab-tooltip="{{uiData.beaker.label}}" lab-tooltip-type="delayed"></beaker>
+    </div>
+    <div class="sub-erlenmeyerflask inner-item" ng-if="uiData.erlenmeyerflask" ng-drag="true" ng-drag-data="uiData.erlenmeyerflask" ng-drag-reset="false" ng-attr-id="{{uiData.erlenmeyerflask.uuid}}"
+         ng-drop="true" ng-drop-success="onDropToErlenmeyerflaskComplete($data,$event)" ng-drop-name="uiData.erlenmeyerflask.name" data-drop-uuid="{{uiData.erlenmeyerflask.uuid}}">
+        <erlenmeyerflask ui-data="uiData.erlenmeyerflask" data-uuid="{{uiData.erlenmeyerflask.uuid}}" lab-tooltip="{{uiData.erlenmeyerflask.label}}" lab-tooltip-type="delayed"></erlenmeyerflask>
+    </div>
+    <div class="sub-graduatedcylinder inner-item" ng-if="uiData.graduatedcylinder" ng-drag="true" ng-drag-data="uiData.graduatedcylinder" ng-drag-reset="false" ng-attr-id="{{uiData.graduatedcylinder.uuid}}"
+         ng-drop="true" ng-drop-success="onDropToGraduatedcylinderComplete($data,$event)" ng-drop-name="uiData.graduatedcylinder.name" data-drop-uuid="{{uiData.graduatedcylinder.uuid}}">
+        <graduatedcylinder ui-data="uiData.graduatedcylinder" data-uuid="{{uiData.graduatedcylinder.uuid}}" lab-tooltip="{{uiData.graduatedcylinder.label}}" lab-tooltip-type="delayed"></graduatedcylinder>
+    </div>
+    <div class="sub-crucible inner-item" ng-if="uiData.crucible" ng-drag="true" ng-drag-data="uiData.crucible" ng-drag-reset="false" ng-attr-id="{{uiData.crucible.uuid}}"
+         ng-drop="true" ng-drop-success="onDropToCrucibleComplete($data,$event)" ng-drop-name="uiData.crucible.name" data-drop-uuid="{{uiData.crucible.uuid}}">
+        <crucible ui-data="uiData.crucible" data-uuid="{{uiData.crucible.uuid}}" lab-tooltip="{{uiData.crucible.label}}" lab-tooltip-type="delayed"></crucible>
+    </div>
+    <span class="button-zero" ng-click="zeroBalance()" ng-cancel-drag></span>
+    <span class="weight">{{ (currentWeight - uiData.state.zero) | weight : uiData.state.scale }}</span>
+    <span class="button-scale" ng-click="changeScale()" ng-cancel-drag></span>
+</div>

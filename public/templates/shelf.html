@@ -1,0 +1,21 @@
+<div class="lab-shelf">
+    <div class="shelf-content">
+        <div class="tab-pane active" id="containers">
+            <shelf-item data="item" ng-repeat="item in shelfData.containers"></shelf-item>
+        </div>
+        <div style="display:none" class="tab-pane" id="materials">
+            <shelf-item data="item" ng-repeat="item in shelfData.materials"></shelf-item>
+        </div>
+        <div style="display:none"  class="tab-pane" id="instruments">
+            <shelf-item data="item" ng-repeat="item in shelfData.instruments"></shelf-item>
+        </div>
+    </div>
+    <div class="shelf-menus">
+        <ul class="nav nav-tabs nav-justified lab-nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#containers">Containers</a></li>
+            <li role="presentation"><a href="#materials" role="materials" >Materials</a></li>
+            <li role="presentation"><a href="#instruments" role="instruments">Instruments</a></li>
+        </ul>
+    </div>
+
+</div>

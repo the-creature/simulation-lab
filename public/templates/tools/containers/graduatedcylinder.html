@@ -1,0 +1,28 @@
+<div class="graduatedcylinder tool-wrap">
+    <canvas class="steam-canvas"></canvas>
+    <div class="sub-thermometer" ng-if="uiData.thermometer" ng-drag="true"
+         ng-drag-data="uiData.thermometer" ng-drag-reset="false"
+         ng-style="{position: 'absolute', left: uiData.thermometerLeft, top: uiData.thermometerTop}">
+        <thermometer ui-data="uiData.thermometer" data-uuid="{{uiData.thermometer.uuid}}" lab-tooltip="{{uiData.thermometer.label}}" lab-tooltip-type="delayed"></thermometer>
+    </div>
+
+    <canvas class="graduatedcylinder-canvas"></canvas>
+    <canvas class="outline-canvas" style="display:none"></canvas>
+    <canvas class="graduatedcylinder-canvas-solid" style="display:none"></canvas>
+    <canvas class="graduatedcylinder-canvas-solid2" style="display:none"></canvas>
+    <canvas class="bubble-canvas"></canvas>
+
+    <audio class="bubble-sound" loop>
+        <source src="assets/audio/bubbling.ogg" type="audio/ogg">
+        <source src="assets/audio/bubbling.mp3" type="audio/mp3">
+    </audio>
+    <audio class="pour-sound" loop>
+        <source src="assets/audio/liquid.ogg" type="audio/ogg">
+        <source src="assets/audio/liquid.mp3" type="audio/mp3">
+    </audio>
+    <audio class="explode-sound">
+        <source src="assets/audio/explode.ogg" type="audio/ogg">
+        <source src="assets/audio/explode.mp3" type="audio/mp3">
+    </audio>
+    <canvas class="exploding-canvas"></canvas>
+</div>

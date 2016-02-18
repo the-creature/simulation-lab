@@ -1,0 +1,22 @@
+<div class="table-item" lab-tooltip="{{toolTip == true ? item.label : item.name }}" lab-tooltip-type="delayed"
+     ng-attr-id="{{item.uuid}}"
+     ng-style="{position: 'absolute', left: item.left, top: item.top}"
+     ng-dblclick="onDblClick(item, $event)"
+     ng-class="{leaned: item.state.isLeaned, hasTransition: item.state.hasTransition}"
+     ng-drag="true" ng-drag-data="item" ng-drag-reset="false" ng-drag-begin="onDragBegin($data, $event)"
+     ng-drop="true" ng-drop-success="onDropComplete($data, $event)" ng-drop-name="item.name" data-drop-uuid="{{item.uuid}}">
+
+    <beaker ui-data="item" ng-if="item.name === 'beaker'" data-uuid="{{item.uuid}}"></beaker>
+    <bunsenburner ui-data="item" ng-if="item.name === 'bunsenburner'" data-uuid="{{item.uuid}}"></bunsenburner>
+    <balance ui-data="item" ng-if="item.name === 'balance'" data-uuid="{{item.uuid}}"></balance>
+    <thermometer ui-data="item" ng-if="item.name === 'thermometer'" data-uuid="{{item.uuid}}"></thermometer>
+    
+    <crucible ui-data="item" ng-if="item.name === 'crucible'" data-uuid="{{item.uuid}}"></crucible>
+    <testtube ui-data="item" ng-if="item.name === 'testtube'" data-uuid="{{item.uuid}}"></testtube>
+    <evaporatingdish ui-data="item" ng-if="item.name === 'evaporatingdish'" data-uuid="{{item.uuid}}"></evaporatingdish>
+    <graduatedcylinder ui-data="item" ng-if="item.name === 'graduatedcylinder'" data-uuid="{{item.uuid}}"></graduatedcylinder>
+    <erlenmeyerflask ui-data="item" ng-if="item.name === 'erlenmeyerflask'" data-uuid="{{item.uuid}}"></erlenmeyerflask>
+    <gassyringe ui-data="item" ng-if="item.name === 'gassyringe'" data-uuid="{{item.uuid}}"></gassyringe>
+    <temperaturebath ui-data="item" ng-if="item.name === 'temperaturebath'" data-uuid="{{item.uuid}}"></temperaturebath>
+    <pressuregauge ui-data="item" ng-if="item.name === 'pressuregauge'" data-uuid="{{item.uuid}}"></pressuregauge>
+</div>

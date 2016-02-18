@@ -1,0 +1,303 @@
+@import "prefixer.less";
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html.light-switch-off {
+    background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.11));
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    font-family: arial;
+    background-color: #000;
+}
+
+.loading-app {
+    
+}
+
+.lab-table {
+    height: 25% !important;
+    top: 49%;
+    position: fixed !important;
+    width: 100%;
+    z-index: 100;
+}
+
+.lab-trash {
+    height: 177px;
+    width: 200px;
+    margin: 12px auto;
+}
+
+.inside-images {
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 100%;
+    bottom: 0;
+}
+
+/**drag&drop start*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[ng-drag] {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+[ng-drag] {
+    color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.lab-table [ng-drag].dragging {
+    opacity: 1;
+    cursor: pointer;
+}
+
+[ng-drop] {
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.table-item {
+    position: absolute;
+    display: inline-block;
+}
+
+.table-item.leaned {
+    .transform(rotate(-45deg));
+}
+.table-item.hasTransition {
+    //.transition(transform 300ms linear, left 300ms linear, top 300ms linear);
+    -webkit-transition: transform 300ms linear, left 300ms linear, top 300ms linear;
+    -moz-transition: transform 300ms linear, left 300ms linear, top 300ms linear;
+    -o-transition: transform 300ms linear, left 300ms linear, top 300ms linear;
+    -ms-transition: transform 300ms linear, left 300ms linear, top 300ms linear;
+    transition: transform 300ms linear, left 300ms linear, top 300ms linear;
+}
+
+[ng-drop].table-item.drag-enter,
+[ng-drop].sub-beaker.drag-enter {
+    /*box-shadow: 0px 0px 25px rgba(46, 184, 238, 0.81);
+    background-color: rgba(46, 184, 238, 0.38);
+    border-radius: 10px;
+    border-color: rgba(46, 184, 238, 0.38);*/
+}
+
+[ng-drop] span.title {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 20px;
+    margin-left: -100px;
+    margin-top: -10px;
+}
+
+[ng-drop] >div {
+    position: relative;
+    z-index: 2;
+}
+
+/**drag&drop end*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+}
+
+.container > .content {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container > .content > .w-50 {
+    width: 50%;
+}
+
+.workspace {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    cursor: default !important;
+}
+
+.lg-xs {
+    padding: 18px 41px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-default {
+    color: #E6E6E6;
+    background-color: #7F5FBF;
+    border: 1px solid;
+    border-color: #6A4DA5;
+    outline: none !important;
+    transition: all .8s;
+    font-weight: 300;
+    font-size: 16px;
+
+}
+
+.btn-default:hover, .btn-default:focus {
+    color: #FCFCFC;
+    background-color: #A888E7;
+    border-color: #6A4DA5;
+}
+
+.btn-default:active {
+    color: #9370DB;
+    background-color: #684AA5;
+    border-color: #6A4DA5;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+[lab-instrument] {
+    display: inline-block;
+}
+
+.btn-maximize {
+    float: right;
+    margin-right: 33px;
+    margin-top: 15px;
+}
+
+.sub-top {
+    position: relative;
+    top: -24px;
+    display: block;
+    /*left: -29px;*/
+    left: -7px;
+}
+
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 6em solid transparent;
+    border-right: 9em solid transparent;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    z-index: 1;
+}
+
+#triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 6em solid transparent;
+    border-left: 9em solid transparent;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    z-index: 1;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.tool-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+#circle {
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #e00;
+    position: absolute;
+    z-index: 1;
+    background-color: #e00;
+}
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scroll::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.scroll::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.scroll::-webkit-scrollbar-track { 
+    background-color: #fff; 
+    border-radius: 8px; 
+} 

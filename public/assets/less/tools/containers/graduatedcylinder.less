@@ -1,0 +1,38 @@
+/*
+* Graduated Cylinder
+*/
+graduatedcylinder, [graduatedcylinder] {
+    display: inline-block;
+}
+
+.graduatedcylinder .graduatedcylinder-canvas, .graduatedcylinder .graduatedcylinder-canvas-solid , .graduatedcylinder .graduatedcylinder-canvas-solid2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: 100%;
+}
+
+.graduatedcylinder {
+    .steam-canvas {
+        position: absolute;
+        left: 26%;
+        top: -5%;
+    }
+
+    .bubble-canvas {
+        position: absolute;
+        left: 26%;
+        bottom: 5%;
+        width: 48%;
+        height: 50%;
+    }
+
+    .exploding-canvas {
+        width: 300%;
+        height: 300%;
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        display: none;
+    }
+}

@@ -1,0 +1,5 @@
+<div class="thermometer tool-wrap">
+    <!-- <span class="temperature">{{ uiData.parent.state.temperature | temperature : uiData.state.scale }}</span> -->
+    <span class="temperature">{{ uiData.parent.state.temperature }}</span>
+    <span class="button-scale-change" ng-click="changeScale($event)" ng-cancel-drag>{{uiData.state.scale}}</span>
+</div>

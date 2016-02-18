@@ -1,0 +1,50 @@
+{
+  "beaker": {
+    "width": "50",
+    "height": "53"
+  },
+  "crucible": {
+    "width": "36",
+    "height": "47"
+  }, 
+  "testtube": {
+    "width": "21",
+    "height": "66"
+  },  
+  "evaporatingdish": {
+    "width": "52",
+    "height": "32"
+  }, 
+  "graduatedcylinder": {
+    "width": "35",
+    "height": "105"
+  },  
+  "erlenmeyerflask": {
+    "width": "60",
+    "height": "85"
+  },   
+  "thermometer": {
+    "width": "60",
+    "height": "76"
+  },
+  "bunsenburner": {
+    "width": "60",
+    "height": "96"
+  },
+  "balance": {
+    "width": "86",
+    "height": "50"
+  },
+  "gassyringe": {
+    "width": "42",
+    "height": "100"
+  },
+  "temperaturebath": {
+    "width": "86",
+    "height": "50"
+  },
+  "pressuregauge": {
+    "width": "45",
+    "height": "74"
+  }
+}

@@ -1,0 +1,49 @@
+@import "animation.less";
+
+span.tooltip {
+    position: absolute;
+    line-height: 14px;
+    padding: 10px 14px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c374c;
+    z-index:999;
+
+    .animation(fadein 0.5s forwards);
+    
+    /* IE10 Consumer Preview */
+    background-image: -ms-linear-gradient(top, #FAFAFA 0%, #9C9C9C 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top, #FAFAFA 0%, #9C9C9C 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(top, #FAFAFA 0%, #9C9C9C 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FAFAFA), color-stop(1, #9C9C9C));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top, #FAFAFA 0%, #9C9C9C 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: linear-gradient(to bottom, #FAFAFA 0%, #9C9C9C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAFAFA', endColorstr='#9C9C9C',GradientType=0 ); /* IE6-9 */
+
+    span.tooltip-title {
+        color: #000066;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #9c9c9c transparent transparent transparent;
+        top: 100%;
+        left: calc(50% - 10px);
+    }
+}
+
+span.tooltip-delayed {
+    opacity: 0;
+    .animation(fadein 0.5s .66s 1 forwards);
+}
